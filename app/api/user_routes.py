@@ -24,7 +24,7 @@ def create_user():
     form = SantaMessageForm()
     form['csrf_token'].data = request.cookies.get('csrf_token')
     if form.validate_on_submit():
-        try:
+        try: 
             # Save user to the database
             user = User(
                 first_name=form.data['first_name'],
