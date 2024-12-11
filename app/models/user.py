@@ -12,7 +12,6 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(250), nullable=False)
     email = db.Column(db.String(255), nullable=True)
-    phone_number = db.Column(db.Integer(), nullable=True)
     message = db.Column(db.String(1000), nullable=False)
 
 
@@ -21,6 +20,5 @@ class User(db.Model, UserMixin):
             'id': self.id,
             'first_name': self.first_name,
             'email': self.email,
-            'phone_number': self.phone_number,
             'message': self.message
         }
