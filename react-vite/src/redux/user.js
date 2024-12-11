@@ -14,7 +14,7 @@ const newUser = (user) => ({
 export const CreateUser = (user) => async (dispatch) => {
     let res;
 
-    let newUser = {
+    let newestUser = {
         first_name: user.first_name,
         email: user.email,
         message: user.message
@@ -36,7 +36,7 @@ export const CreateUser = (user) => async (dispatch) => {
 
     const data = await res.json()
 
-    dispatch(newUser())
+    dispatch(newUser(data))
 }
 
 const initialState = {user: {}}
